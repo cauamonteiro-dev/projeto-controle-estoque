@@ -3,7 +3,7 @@
 Este projeto tem como objetivo desenvolver uma aplicação simples de controle de estoque, permitindo o gerenciamento de produtos e seus respectivos estoques utilizando Java, Spring Boot e PostgreSQL.
 
 ## Tecnologias Utilizadas
-- Java 25
+- Java 21
 - Spring Boot (API REST, camada de serviços e persistência)
 - Spring Data JPA
 - PostgreSQL
