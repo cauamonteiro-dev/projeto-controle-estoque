@@ -18,9 +18,11 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public Produto criarProduto(@RequestBody Produto produto) {
-        return produtoService.salvar(produto);
+    public ResponseEntity<Produto> criarProduto(@RequestBody Produto produto) {
+        Produto produtoSalvo = produtoService.salvar(produto);
+        return ResponseEntity.status(201).body(produtoSalvo);
     }
+
 
     @GetMapping
     public List<Produto> listarProdutos() {
