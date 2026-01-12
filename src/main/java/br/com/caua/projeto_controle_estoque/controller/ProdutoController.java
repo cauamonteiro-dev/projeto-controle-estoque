@@ -23,7 +23,6 @@ public class ProdutoController {
         return ResponseEntity.status(201).body(produtoSalvo);
     }
 
-
     @GetMapping
     public List<Produto> listarProdutos() {
         return produtoService.listarTodos();
@@ -39,6 +38,14 @@ public class ProdutoController {
         }
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Produto> atualizarProduto(
+            @PathVariable Long id,
+            @RequestBody Produto produto) {
+
+        Produto produtoAtualizado = produtoService.atualizar(id, produto);
+        return ResponseEntity.ok(produtoAtualizado);
+    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarProduto(@PathVariable Long id) {
