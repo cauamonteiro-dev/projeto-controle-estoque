@@ -1,7 +1,8 @@
 # 📦 Projeto Controle de Estoque
 
-Este projeto consiste em uma **API REST para controle de estoque**, permitindo o gerenciamento de produtos, incluindo cadastro, consulta, atualização e remoção.  
-Foi desenvolvido com foco em **boas práticas de backend**, utilizando Java e o ecossistema Spring.
+Este projeto consiste em uma API REST para controle de estoque, permitindo o gerenciamento de produtos, incluindo cadastro, consulta, atualização e remoção.
+
+A API foi desenvolvida utilizando Java e Spring Boot, com foco em boas práticas de desenvolvimento backend e arquitetura em camadas.
 
 ---
 
@@ -20,26 +21,17 @@ Este projeto foi criado com o objetivo de **praticar e consolidar conhecimentos*
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Java 21**
-- **Spring Boot**
+### Backend
+- Java 21
+- Spring Boot
   - Spring Web
   - Spring Data JPA
-- **PostgreSQL**
-- **Maven**
-- **IntelliJ IDEA**
-- **Git & GitHub**
+- PostgreSQL
+- Maven
 
----
-
-## ⚙️ Funcionalidades
-
-- Cadastro de produtos
-- Listagem de produtos
-- Consulta de produto por ID
-- Atualização de informações do produto
-- Remoção de produtos
-- Controle de quantidade em estoque
-- Tratamento básico de erros
+### Ferramentas
+- IntelliJ IDEA
+- Git & GitHub
 
 ---
 
@@ -60,6 +52,64 @@ Este projeto foi criado com o objetivo de **praticar e consolidar conhecimentos*
 | GET    | /produtos/{id} | Buscar produto por ID    |
 | PUT    | /produtos/{id} | Atualizar produto        |
 | DELETE | /produtos/{id} | Remover produto          |
+
+---
+
+## 🖥️ Frontend da Aplicação
+
+Além da API REST, o projeto também possui um frontend simples desenvolvido em React, com o objetivo de consumir os endpoints da aplicação e praticar a integração entre frontend e backend.
+
+🔗 [Link do Frontend](https://github.com/cauamonteiro-dev/controle-estoque-frontend)
+
+---
+
+## ▶️ Como Executar a API
+
+### Pré-requisitos
+
+Antes de começar, é necessário ter instalado:
+
+* Java 21
+* Maven
+* PostgreSQL
+
+---
+
+### Configurar o banco de dados
+
+Crie um banco PostgreSQL com o nome:
+
+```sql
+projeto_controle_estoque
+```
+
+Depois, configure as credenciais do banco no arquivo:
+
+```properties
+src/main/resources/application.properties
+```
+
+---
+
+### Executar a aplicação
+
+No terminal, execute:
+
+```bash
+./mvnw spring-boot:run
+```
+
+Ou execute a classe principal pelo IntelliJ IDEA.
+
+---
+
+### API disponível para requisições em:
+
+```text
+http://localhost:8080
+```
+
+---
 
 ## 👨‍💻 Autor
 
